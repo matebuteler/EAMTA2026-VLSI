@@ -27,9 +27,13 @@ This repository contains the design and verification flow for an **8-bit counter
 ```
 
 ## Quick Start
-See [docs/SETUP.md](docs/SETUP.md) for detailed setup instructions.
-See [docs/STUDENT_GUIDE.md](docs/STUDENT_GUIDE.md) for student workflow.
-See [docs/DESIGN_SPEC.md](docs/DESIGN_SPEC.md) for the counter specification.
+**New to the project?** Start here: [QUICKSTART.md](QUICKSTART.md) ⚡
+
+Detailed guides:
+- [docs/SETUP.md](docs/SETUP.md) - Installation and setup
+- [docs/STUDENT_GUIDE.md](docs/STUDENT_GUIDE.md) - Complete workflow
+- [docs/DESIGN_SPEC.md](docs/DESIGN_SPEC.md) - Technical specification
+- [docs/BLOCK_ASSIGNMENTS.md](docs/BLOCK_ASSIGNMENTS.md) - Block assignments
 
 ## Design Flow
 1. **Schematic Design** (xschem)
