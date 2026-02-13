@@ -27,9 +27,10 @@ RST ───┤  │ S0 │  │ S1 │  │ S2 │  │ S3 │        │
 ### Hierarchy
 
 1. **Basic Gates** (Level 1)
-   - AND2 - 2-input AND gate
-   - XOR2 - 2-input XOR gate
    - INV - Inverter
+   - NAND2 - 2-input NAND gate
+   - AND2 - 2-input AND gate (NAND + INV)
+   - XOR2 - 2-input XOR gate
 
 2. **D Flip-Flop** (Level 2)
    - DFF - Positive edge-triggered D flip-flop with reset
