@@ -4,10 +4,11 @@ This guide will help you set up the development environment for the 4-bit counte
 
 ## Prerequisites
 
-- Linux-based operating system (Ubuntu 20.04+ recommended)
-- podman or docker installed
+- Linux-based operating system or WSL (Ubuntu 20.04+ recommended)
+    - In case you're on Windows, running `wsl --install` on PowerShell will install WSL (Windows Subsystem for Linux), which is enough to run the tools.
+- podman installed
+   -  Docker is much more erratic with this container and requires adding your user to the docker group, which equals giving it root permissions.
 - distrobox installed (for easier container integration)
-- Git
 
 ## Environment Setup
 
@@ -50,7 +51,7 @@ echo $PDK_ROOT
 ls $PDK_ROOT
 ```
 
-If the PDK is not available, try running 'sak-pdk ihp-sh13g2'
+If the PDK is not available, try running `sak-pdk ihp-sh13g2` to set the correct environment variables.
 
 ## Directory Structure
 
@@ -81,7 +82,7 @@ EAMTA2026-VLSI/
 
 If you have issues with the container:
 - Check that podman is running: `podman ps`
-- Restart the distrobox: `distrobox stop vlsi-tools && distrobox enter vlsi-tools`
+- Restart the distrobox: `distrobox stop iic-osic-tools && distrobox enter iic-osic-tools`
 - Check container logs: `podman logs <container-id>`
 
 ### PDK Issues
