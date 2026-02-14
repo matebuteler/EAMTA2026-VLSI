@@ -33,12 +33,30 @@ distrobox create --image docker.io/hpretl/iic-osic-tools:latest --name iic-osic-
 # Enter the distrobox
 distrobox enter iic-osic-tools
 ```
+### 3. Set Up SSH and Clone the Repository
 
-### 3. Clone the Repository
+#### Create a GitHub Account and SSH Key
+
+1. Create a GitHub account at [github.com](https://github.com) if you don't have one
+2. Generate an SSH keypair, by running this on your distrobox terminal:
+    ```bash
+    ssh-keygen -t ed25519 -C "your-email@example.com"
+    ```
+3. Add the public key to your GitHub account:
+    - Go to GitHub Settings → SSH and GPG keys → New SSH key
+    - Paste the contents of `~/.ssh/id_ed25519.pub`. You can fetch these by running `cat ~/.ssh/id_ed25519.pub` on your terminal.
+
+#### Start the SSH Agent
 
 ```bash
-# Inside the container or on your host system
-git clone https://github.com/matebuteler/EAMTA2026-VLSI.git
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+#### Clone the Repository
+
+```bash
+git clone git@github.com:matebuteler/EAMTA2026-VLSI.git
 cd EAMTA2026-VLSI
 ```
 
