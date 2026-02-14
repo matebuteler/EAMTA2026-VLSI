@@ -28,7 +28,7 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo
 ```bash
 
 # Create a distrobox with the container
-distrobox create --image hpretl/iic-osic-tools:latest --name iic-osic-tools
+distrobox create --image docker.io/hpretl/iic-osic-tools:latest --name iic-osic-tools
 
 # Enter the distrobox
 distrobox enter iic-osic-tools
